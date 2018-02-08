@@ -1,0 +1,1 @@
+java -jar "/opt/jenkins/jenkins.war" --httpPort=9191
