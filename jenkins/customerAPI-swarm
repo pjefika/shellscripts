@@ -4,14 +4,14 @@
 
 # Do NOT "set -e"
 
-PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
 # FIXME: configure your app here
 DESC="APP"
 NAME="customerAPI-swarm"
 CWD=/root/.jenkins/workspace/customerAPI/
 USER=root
 GROUP=root
-JAVA=/usr/lib/jvm/java-8-openjdk-amd64
+JAVA=/usr/bin/java
 JVM_ARGS=
 JAR_PATH=/root/.jenkins/workspace/customerAPI/customerAPI/target/customerAPI-swarm.jar
 JAVA_ARGS="$JVM_ARGS -jar $JAR_PATH"
