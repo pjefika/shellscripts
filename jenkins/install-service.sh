@@ -1,1 +1,1 @@
-cp customerAPI-swarm /etc/init.d/customerAPI-swarm
+cp /opt/shellscripts/jenkins/customerAPI-swarm /etc/init.d/customerAPI-swarm
