@@ -6,6 +6,7 @@
 
 
 # FIXME: configure your app here
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="APP"
 NAME="customerAPI-swarm"
 CWD=/root/.jenkins/workspace/customerAPI/
