@@ -1,1 +1,1 @@
-cp jenkins.conf /etc/init.d/jenkins
+cp jenkins /etc/init.d/jenkins
