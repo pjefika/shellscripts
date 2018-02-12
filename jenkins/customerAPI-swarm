@@ -14,9 +14,8 @@
 
 # Do NOT "set -e"
 
-PATH=/sbin:/usr/sbin:/bin:/usr/bin
 # FIXME: configure your app here
-DESC="CustomerAPI"
+DESC="customerAPI-swarm"
 NAME="customerAPI-swarm"
 CWD=/root/.jenkins/workspace/customerAPI/customerAPI/target
 USER=root
