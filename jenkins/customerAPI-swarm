@@ -1,26 +1,17 @@
 #! /bin/sh
 ### BEGIN INIT INFO
-# FIXME: set Provides and Short-Description
-# Provides:          My java app
-# Required-Start:    $remote_fs $syslog
-# Required-Stop:     $remote_fs $syslog
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: initscript for My java app
-### END INIT INFO
 
-# FIXME: your name here
-# Author: Leonid Shevtsov <leonid@shevtsov.me>
 
 # Do NOT "set -e"
 
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
 # FIXME: configure your app here
-DESC="customerAPI-swarm"
+DESC="APP"
 NAME="customerAPI-swarm"
-CWD=/root/.jenkins/workspace/customerAPI/customerAPI/target
+CWD=/root/.jenkins/workspace/customerAPI/
 USER=root
 GROUP=root
-JAVA=$JAVA_HOME
+JAVA=/usr/lib/jvm/java-8-openjdk-amd64
 JVM_ARGS=
 JAR_PATH=/root/.jenkins/workspace/customerAPI/customerAPI/target/customerAPI-swarm.jar
 JAVA_ARGS="$JVM_ARGS -jar $JAR_PATH"
@@ -65,7 +56,6 @@ do_start()
     || return 1
   # FIXME: export environment variables here
   # export PORT=8080
-  
   start-stop-daemon --start \
     --quiet \
     --make-pidfile \
