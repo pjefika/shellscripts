@@ -2,7 +2,7 @@ Description = Test Service by techken.in
 After=network-online.target
  
 [Service]
-ExecStart = "java -jar /opt/swarm/customerAPI/customerAPI-swarm.jar"
+ExecStart = java -jar "/opt/swarm/customerAPI/customerAPI-swarm.jar"
  
 [Install]
 WantedBy = multi-user.target
