@@ -8,7 +8,7 @@ User=root
 TimeoutStartSec=0
 Type=simple
 KillMode=process
-ExecStart = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.151-5.b12.el7_4.x86_64/jre/bin/java -jar "/opt/swarm/customerAPI/customerAPI-swarm.jar &"
+ExecStart = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.151-5.b12.el7_4.x86_64/jre/bin/java -jar /opt/swarm/customerAPI/customerAPI-swarm.jar &
 WorkingDirectory=/opt/swarm/customerAPI/
 
 
