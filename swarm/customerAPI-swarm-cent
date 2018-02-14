@@ -1,8 +1,0 @@
-Description = Test Service by techken.in
-After = network.target
- 
-[Service]
-ExecStart = "java -jar /opt/swarm/customerAPI/customerAPI-swarm.jar"
- 
-[Install]
-WantedBy = multi-user.target
