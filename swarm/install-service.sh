@@ -1,0 +1,1 @@
+cp /opt/shellscripts/swarm/customerAPI-swarm /etc/init.d/customerAPI-swarm
