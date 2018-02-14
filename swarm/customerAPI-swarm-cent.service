@@ -1,5 +1,5 @@
 Description = Test Service by techken.in
-After = network.target
+After=network-online.target
  
 [Service]
 ExecStart = "java -jar /opt/swarm/customerAPI/customerAPI-swarm.jar"
