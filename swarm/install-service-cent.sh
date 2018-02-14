@@ -1,0 +1,1 @@
+cp /opt/shellscripts/swarm/customerAPI-swarm-cent.service /etc/systemd/system/multi-user.target.wants/
