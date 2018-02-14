@@ -2,7 +2,12 @@ Description = Test Service by techken.in
 After=network-online.target
  
 [Service]
+Type=forking
+User=root
+Group=root
 ExecStart = java -jar "/opt/swarm/customerAPI/customerAPI-swarm.jar"
- 
+WorkingDirectory=/opt/swarm/customerAPI/
+
+
 [Install]
 WantedBy = multi-user.target
