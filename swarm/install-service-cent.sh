@@ -5,7 +5,7 @@ PORT=$2
 echo "
 
 [Unit]
-Description="$DEPLOY_NAME" Service
+Description=stealerAPI Service
 After=auditd.service systemd-user-sessions.service time-sync.target
  
  
@@ -14,8 +14,8 @@ User=root
 TimeoutStartSec=0
 Type=simple
 KillMode=process
-ExecStart = sudo java -jar /opt/swarm/"$DEPLOY_NAME"/"$DEPLOY_NAME"-swarm.jar >> /opt/swarm/"$DEPLOY_NAME"/"$DEPLOY_NAME"-swarm.log 2>&1
-WorkingDirectory=/opt/swarm/"$DEPLOY_NAME"/
+ExecStart = "$JAVA_HOME"/bin/java -jar /opt/swarm/stealerAPI/stealerAPI-swarm.jar >> /opt/swarm/stealerAPI/stealerAPI-swarm.log
+WorkingDirectory=/opt/swarm/stealerAPI/
 
 
 [Install]
