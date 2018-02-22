@@ -2,6 +2,9 @@
 DEPLOY_NAME=$0
 PORT=$1
 
+echo $0
+echo $1
+
 #cp -R /opt/shellscripts/swarm/$DEPLOY_NAME-swarm-cent.service /etc/systemd/system/$DEPLOY_NAME-swarm-cent.service
 #chmod 777 /etc/systemd/system/$DEPLOY_NAME-swarm-cent.service
 
