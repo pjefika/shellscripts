@@ -14,14 +14,14 @@ User=root
 TimeoutStartSec=0
 Type=simple
 KillMode=process
-ExecStart = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.151-5.b12.el7_4.x86_64/jre/bin/java -jar /opt/swarm/".$DEPLOY_NAME."/".$DEPLOY_NAME."-swarm.jar > /opt/swarm/".$DEPLOY_NAME."/".$DEPLOY_NAME."-swarm.log
+ExecStart = ".$JAVA_HOME."/bin/java -jar /opt/swarm/".$DEPLOY_NAME."/".$DEPLOY_NAME."-swarm.jar > /opt/swarm/".$DEPLOY_NAME."/".$DEPLOY_NAME."-swarm.log
 WorkingDirectory=/opt/swarm/".$DEPLOY_NAME."/
 
 
 [Install]
 WantedBy = multi-user.target
 
-" >> /opt/shellscripts/swarm/$DEPLOY_NAME-swarm-cent.service
+" >> /opt/shellscripts/swarm/$DEPLOY_NAME-swarm.service
 
 #cp -R /opt/shellscripts/swarm/$DEPLOY_NAME-swarm-cent.service /etc/systemd/system/$DEPLOY_NAME-swarm-cent.service
 #chmod 777 /etc/systemd/system/$DEPLOY_NAME-swarm-cent.service
