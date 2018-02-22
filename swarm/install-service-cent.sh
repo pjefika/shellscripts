@@ -14,7 +14,7 @@ User=root
 TimeoutStartSec=0
 Type=simple
 KillMode=process
-ExecStart = "$JAVA_HOME"/bin/java -jar /opt/swarm/"$DEPLOY_NAME"/"$DEPLOY_NAME"-swarm.jar >> /opt/swarm/"$DEPLOY_NAME"/"$DEPLOY_NAME"-swarm.log 2>&1
+ExecStart = sudo "$JAVA_HOME"/bin/java -jar /opt/swarm/"$DEPLOY_NAME"/"$DEPLOY_NAME"-swarm.jar >> /opt/swarm/"$DEPLOY_NAME"/"$DEPLOY_NAME"-swarm.log 2>&1
 WorkingDirectory=/opt/swarm/"$DEPLOY_NAME"/
 
 
