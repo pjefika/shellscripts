@@ -32,5 +32,6 @@ firewall-cmd --reload
 
 systemctl daemon-reload
 systemctl enable $DEPLOY_NAME-swarm.service
-systemctl restart $DEPLOY_NAME-swarm.service
-systemctl restart $DEPLOY_NAME-swarm.service
+
+systemctl stop $DEPLOY_NAME-swarm.service
+systemctl start $DEPLOY_NAME-swarm.service
