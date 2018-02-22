@@ -2,6 +2,8 @@
 DEPLOY_NAME=$1
 PORT=$2
 
+mkdir /opt/swarm/$DEPLOY_NAME/
+
 echo "
 
 [Unit]
