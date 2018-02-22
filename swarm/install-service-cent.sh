@@ -5,7 +5,7 @@ PORT=$2
 echo "
 
 [Unit]
-Description=".$DEPLOY_NAME." Service
+Description="$DEPLOY_NAME" Service
 After=auditd.service systemd-user-sessions.service time-sync.target
  
  
@@ -14,8 +14,8 @@ User=root
 TimeoutStartSec=0
 Type=simple
 KillMode=process
-ExecStart = ".$JAVA_HOME."/bin/java -jar /opt/swarm/".$DEPLOY_NAME."/".$DEPLOY_NAME."-swarm.jar > /opt/swarm/".$DEPLOY_NAME."/".$DEPLOY_NAME."-swarm.log
-WorkingDirectory=/opt/swarm/".$DEPLOY_NAME."/
+ExecStart = "$JAVA_HOME"/bin/java -jar /opt/swarm/"$DEPLOY_NAME"/"$DEPLOY_NAME"-swarm.jar > /opt/swarm/"$DEPLOY_NAME"/"$DEPLOY_NAME"-swarm.log
+WorkingDirectory=/opt/swarm/"$DEPLOY_NAME"/
 
 
 [Install]
@@ -23,12 +23,12 @@ WantedBy = multi-user.target
 
 " >> /opt/shellscripts/swarm/$DEPLOY_NAME-swarm.service
 
-#cp -R /opt/shellscripts/swarm/$DEPLOY_NAME-swarm-cent.service /etc/systemd/system/$DEPLOY_NAME-swarm-cent.service
-#chmod 777 /etc/systemd/system/$DEPLOY_NAME-swarm-cent.service
+cp -R /opt/shellscripts/swarm/$DEPLOY_NAME-swarm.service /etc/systemd/system/$DEPLOY_NAME-swarm.service
+chmod 777 /etc/systemd/system/$DEPLOY_NAME-swarm.service
 
-#firewall-cmd --zone=dmz --add-port=$PORT/tcp --permanent
-#firewall-cmd --zone=public --add-port=$PORT/tcp --permanent
-#firewall-cmd --reload
+firewall-cmd --zone=dmz --add-port=$PORT/tcp --permanent
+firewall-cmd --zone=public --add-port=$PORT/tcp --permanent
+firewall-cmd --reload
 
-#systemctl daemon-reload
-#systemctl enable $DEPLOY_NAME-swarm-cent.service
+systemctl daemon-reload
+systemctl enable $DEPLOY_NAME-swarm.service
