@@ -14,8 +14,8 @@ User=root
 TimeoutStartSec=0
 Type=simple
 KillMode=process
-ExecStart = "$JAVA_HOME"/bin/java -jar /opt/swarm/stealerAPI/stealerAPI-swarm.jar >> /opt/swarm/stealerAPI/stealerAPI-swarm.log
-WorkingDirectory=/opt/swarm/stealerAPI/
+ExecStart = "$JAVA_HOME"/bin/java -jar /opt/swarm/"$DEPLOY_NAME"/"$DEPLOY_NAME"-swarm.jar >> /opt/swarm/"$DEPLOY_NAME"/"$DEPLOY_NAME"-swarm.log
+WorkingDirectory=/opt/swarm/"$DEPLOY_NAME"/
 StandardOutput=journal+console
 
 [Install]
