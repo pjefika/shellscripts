@@ -21,7 +21,8 @@ WorkingDirectory=/opt/swarm/"$DEPLOY_NAME"/
 [Install]
 WantedBy = multi-user.target
 
-" >> /opt/shellscripts/swarm/$DEPLOY_NAME-swarm.service
+" > /opt/shellscripts/swarm/$DEPLOY_NAME-swarm.service
+
 
 cp -R /opt/shellscripts/swarm/$DEPLOY_NAME-swarm.service /etc/systemd/system/$DEPLOY_NAME-swarm.service
 chmod 777 /etc/systemd/system/$DEPLOY_NAME-swarm.service
