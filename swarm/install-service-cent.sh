@@ -16,7 +16,7 @@ Type=simple
 KillMode=process
 ExecStart = "$JAVA_HOME"/bin/java -jar /opt/swarm/stealerAPI/stealerAPI-swarm.jar >> /opt/swarm/stealerAPI/stealerAPI-swarm.log
 WorkingDirectory=/opt/swarm/stealerAPI/
-
+StandardOutput=journal+console
 
 [Install]
 WantedBy = multi-user.target
