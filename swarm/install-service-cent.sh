@@ -26,6 +26,9 @@ WantedBy = multi-user.target
 
 cp -R /opt/shellscripts/swarm/$DEPLOY_NAME-swarm.service /etc/systemd/system/$DEPLOY_NAME-swarm.service
 chmod 777 /etc/systemd/system/$DEPLOY_NAME-swarm.service
+rm -R /opt/shellscripts/swarm/$DEPLOY_NAME-swarm.service
+
+
 
 firewall-cmd --zone=dmz --add-port=$PORT/tcp --permanent
 firewall-cmd --zone=public --add-port=$PORT/tcp --permanent
